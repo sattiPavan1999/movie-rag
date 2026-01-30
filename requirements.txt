@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-openai
+langchain_chroma
+chromadb
+tiktoken
+python-dotenv
+ragas
+openai
+pytest
+pytest-asyncio

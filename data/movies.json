@@ -1,0 +1,57 @@
+[
+    {
+        "id": "inception",
+        "title": "Inception",
+        "director": "Christopher Nolan",
+        "cast": [
+            "Leonardo DiCaprio",
+            "Joseph Gordon-Levitt",
+            "Elliot Page"
+        ],
+        "year": 2010
+    },
+    {
+        "id": "interstellar",
+        "title": "Interstellar",
+        "director": "Christopher Nolan",
+        "cast": [
+            "Matthew McConaughey",
+            "Anne Hathaway",
+            "Jessica Chastain"
+        ],
+        "year": 2014
+    },
+    {
+        "id": "avatar",
+        "title": "Avatar",
+        "director": "James Cameron",
+        "cast": [
+            "Sam Worthington",
+            "Zoe Saldana",
+            "Sigourney Weaver"
+        ],
+        "year": 2009
+    },
+    {
+        "id": "the-shawshank-redemption",
+        "title": "The Shawshank Redemption",
+        "director": "Frank Darabont",
+        "cast": [
+            "Tim Robbins",
+            "Morgan Freeman",
+            "Bob Gunton"
+        ],
+        "year": 1994
+    },
+    {
+        "id": "the-lion-king",
+        "title": "The Lion King",
+        "director": "Roger Allers, Rob Minkoff",
+        "cast": [
+            "Matthew Broderick",
+            "Jeremy Irons",
+            "James Earl Jones"
+        ],
+        "year": 1994
+    }
+]
