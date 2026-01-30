@@ -43,52 +43,52 @@ async def rag_pipeline(question: str):
 
     return answer, retrieved_chunks
 
-# @pytest.mark.asyncio
-# async def test_context_precision():
-#     metric = LLMContextPrecisionWithReference(llm=llm)
+@pytest.mark.asyncio
+async def test_context_precision():
+    metric = LLMContextPrecisionWithReference(llm=llm)
 
-#     question = "Who is Roger Allers?"
-#     ground_truth = "lion king director"
+    question = "Who is Roger Allers?"
+    ground_truth = "lion king director"
 
-#     answer, retrieved_chunks = await rag_pipeline(question)
+    answer, retrieved_chunks = await rag_pipeline(question)
 
-#     print("Answer: ", answer)
-#     print("Retrieved Chunks: ", retrieved_chunks)
+    print("Answer: ", answer)
+    print("Retrieved Chunks: ", retrieved_chunks)
 
-#     sample = SingleTurnSample(
-#         user_input=question,
-#         reference=ground_truth,              # ✅ correct usage
-#         retrieved_contexts=retrieved_chunks  # ✅ list[str]
-#     )
+    sample = SingleTurnSample(
+        user_input=question,
+        reference=ground_truth,              # ✅ correct usage
+        retrieved_contexts=retrieved_chunks  # ✅ list[str]
+    )
 
-#     score = await metric.single_turn_ascore(sample)
+    score = await metric.single_turn_ascore(sample)
 
-#     print("Context Precision Score:", score)
+    print("Context Precision Score:", score)
 
-#     assert score >= 0.6
+    assert score >= 0.6
 
 
-# @pytest.mark.asyncio
-# async def test_faithfulness():
-#     metric = Faithfulness(llm=llm)
+@pytest.mark.asyncio
+async def test_faithfulness():
+    metric = Faithfulness(llm=llm)
 
-#     question = "Who directed Interstellar?"
-#     ground_truth = "Christopher Nolan"
+    question = "Who directed Interstellar?"
+    ground_truth = "Christopher Nolan"
 
-#     answer, retrieved_chunks = await rag_pipeline(question)
+    answer, retrieved_chunks = await rag_pipeline(question)
 
-#     sample = SingleTurnSample(
-#         user_input=question,
-#         response=ground_truth,                    # model output
-#         retrieved_contexts=retrieved_chunks
-#     )
+    sample = SingleTurnSample(
+        user_input=question,
+        response=ground_truth,                    # model output
+        retrieved_contexts=retrieved_chunks
+    )
 
-#     score = await metric.single_turn_ascore(sample)
+    score = await metric.single_turn_ascore(sample)
 
-#     print("Faithfulness score:", score)
+    print("Faithfulness score:", score)
 
-#     # Adjusted threshold - LLM adds conversational elements
-#     assert score >= 0.6
+    # Adjusted threshold - LLM adds conversational elements
+    assert score >= 0.6
 
 def run_rag_turns(conversation):
     """
